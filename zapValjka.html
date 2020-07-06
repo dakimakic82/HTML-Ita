@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- User input , jednostavan input tag koji mora da ima ID(mozda i nemora :) -->
+    Unesi visinu <br>
+
+    <input type="number" id='n1'>
+    <br> Unesi Poluprecnik
+    <br>
+    <input type="number" id='n2'>
+    <input type="button" onclick="zapremina()" value="izracunaj"> </input>
+
+    <!-- Funkcija za izracunavanje zapremine-->
+    <script>
+        function zapremina() {
+            var x = Number(document.getElementById('n1').value) // vezuje input za varijablu // 
+            var y = Number(document.getElementById('n2').value) // vezuje input za varijablu // 
+            var total = (x * x) * y * 3.14 // formula za racunanje//
+            return alert('zapremina je: ' + total) // print za korisnika //
+        }
+        //nisam siguran dal treba return na kraju ili je implicitan //
+    </script>
+</body>
+
+</html>

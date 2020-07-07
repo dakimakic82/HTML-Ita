@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin-top: 15%;
+            text-align: center;
+            background: #3A1C71;
+            background: linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71);
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    Unesi prvi broj <br>
+    <input type="number" id='n1'>
+    <br> Unesi drugi broj
+    <br>
+    <input type="number" id='n2'>
+    <br> Unesi operaciju
+    <br>
+    <input type="radio" id="operacija" value="+">
+    <label for="plus">+</label>
+    <input type="radio" id="operacija" value="-">
+    <label for="minus">-</label>
+    <input type="radio" id="operacija" value="/">
+    <label for="div">/</label>
+    <input type="radio" id="operacija" value="*">
+    <label for="multi">*</label>
+
+
+
+    <input type="button" onclick="calculate()" value="izracunaj"> </input>
+
+    <script>
+        function calculate() {
+            var sign = String(document.getElementById('operacija').value)
+            var x = Number(document.getElementById('n1').value)
+            var y = Number(document.getElementById('n2').value)
+            if (sign === '+') {
+                return alert(x + y)
+            } else if (sign === '/') {
+                return alert(x / y)
+            } else if (sign === '*') {
+                return alert(x * y)
+            } else if (sign === '-') {
+                return alert(x - y)
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #050210;
+            margin-top: 300px;
+            margin-left: 33%;
+            display: grid;
+        }
+        
+        .square {
+            position: relative;
+            height: 600px;
+            width: 600px;
+            animation-name: my_anime;
+            border-radius: 50%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            box-shadow: 1px 1px 120px #fb5dad, 1px 1px 120px #55fb9f, 1px 1px 120px #55fb9f;
+            filter: blur(50px);
+        }
+        
+        .circle_veci {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            margin: auto;
+            background-color: red;
+            opacity: 0.2;
+            font-family: sans-serif;
+            font-size: 28px;
+            border-radius: 50%;
+        }
+        
+        .circle_2 {
+            position: fixed;
+            background-color: black;
+            background-position: center;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            margin: 50px;
+        }
+        
+        .circle_3 {
+            position: fixed;
+            background-color: black;
+            background-position: center;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            margin: 50px;
+            animation-name: krug;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes my_anime {
+            0% {
+                transform: rotate(45deg);
+            }
+            45% {
+                transform: rotate(90deg);
+            }
+            55% {
+                transform: rotate(135deg);
+            }
+            95% {
+                transform: rotate(180deg);
+            }
+        }
+        
+        @keyframes krug {
+            0% {
+                background-color: #1f1f20;
+                transform: scale(0);
+            }
+            45% {
+                background-color: #1f1f20;
+                transform: scale(0.3);
+            }
+            55% {
+                background-color: #1f1f20;
+                transform: scale(0.6);
+            }
+            95% {
+                background-color: #1f1f20;
+                transform: scale(0.9);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="square"></div>
+    <div class="circle_veci"></div>
+    <div class="circle_2"></div>
+    <div class="circle_3"></div>
+</body>
+
+</html>
